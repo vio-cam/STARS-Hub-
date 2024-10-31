@@ -1,0 +1,259 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+
+.navbar {
+    background-color: #def0fb;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.navbar a{
+    color:red;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#stars-word, #hub-word{    
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    animation: pulsecolor 1.25s infinite;
+  }
+  
+  #stars-word, #stars-word a {    
+      color: #38b6ff;
+      font-weight: 800;
+      font-style: normal;
+      letter-spacing: -3px;
+      line-height: 45px;
+      font-size: 3rem;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  #hub-word {
+      font-weight: 600;
+      color: #ee7e25;
+      font-size: .6rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      transform: translate(18%, 0%);
+  }
+  
+  #logo {
+    max-width: 110px;
+    height: auto;
+    animation: rubberBand 2.5s ease-in infinite;
+    display:flexbox;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #star-icon {
+    position: absolute;
+    color: #def0fb;
+    font-size: .65rem;
+    transform: translate(10%, -130%);
+  }
+  
+@keyframes pulsecolor {
+      50% {
+      text-shadow: 0px 0px 30px #c4c0f8;
+      }
+}
+
+#loadingSpinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Para asegurarte de que esté por encima de otros elementos */
+}
+
+#spinnerImage {
+    width: 50px;  /* Ajusta el tamaño aquí, hazlo más pequeño */
+    height: 50px;
+    animation: spin 1s linear infinite; /* Aplicar la animación de giro */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); /* Comienza sin rotar */
+    }
+    to {
+        transform: rotate(360deg); /* Termina una rotación completa */
+    }
+}
+#cargando {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.img-fluid {
+    cursor: pointer;
+    width: 50px;
+}
+
+.dropdown-menu--lg {
+    min-width: 18rem;
+    padding: 0px;
+    border-radius: 5px;
+    position: rigth;
+}
+
+.dropdown-menu_header  img{
+    width: 50px;
+}
+
+.dropdown-menu_header {
+    background: rgb(101, 179, 243);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.userName {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.bi-list {
+    cursor: pointer;
+}
+
+.dropdown-menu_option {
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.dropdown-menu_option:hover {
+    background: beige;
+    color: rgb(101, 179, 243);
+    border-left: 3px solid blue ;
+    transition: all 0.1s case-out;
+}
+
+
+.nav-pills {
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 0.5rem; 
+    padding: 1rem; 
+    background-color: #f8f9fa; 
+}
+
+.nav-item {
+    margin-bottom: 0.5rem; 
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem; 
+    color: #495057;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #e9ecef; 
+    border-radius: 0.25rem;
+}
+
+
+.userName {
+    color:black
+}
+
+.botones {
+    margin-left: auto; /* Empuja los botones hacia la derecha */
+  }
+
+.botones button {
+    margin-right: 5px; /* Espaciado entre botones */
+  }
+
+
+       
+.container {
+            max-width: 80%;
+        }
+
+/* Estilo para fijar el formulario de "Add New Task" */
+.task-form-container {
+    position: sticky;
+    top: 20px;
+    padding: 80%;
+    margin: 5%;
+}
+
+.row .center {
+    background-color: #fff567;
+}
+#task-form .btn-block {
+    background-color: #ee7e25;
+}
+
+/* Hacer desplazable la sección de tareas */
+#tasks-container {
+    height: 100%;
+    overflow-y: auto;
+    padding: 3%;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#saludo {
+    margin-bottom: 20px; /* Espacio entre el saludo y el formulario */
+}
+
+.button-up {
+    width: 60px;
+    height: 60px;
+    background: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+
+}
+
+.button-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0,0,0,1);
+}
+ i {
+    width: 10px;
+ }
+
+ .btn-like i {
+    transition: all 0.3s ease; /* Para una animación suave */
+}
+
+/* Sombra que se aplicará cuando se haga clic en el icono */
+.btn-like i.active {
+    color: #f00; /* Cambia el color al rojo cuando está activo */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Sombra de texto */
+}

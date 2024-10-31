@@ -8,90 +8,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/CSS/inicio.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="assets/CSS/styles.css">
 </head>
 <body>
-<<<<<<< HEAD
-    
-    <nav class="navbar navbar-light bg-light">   
-        <div id="logo-container" class="container-fluid">
-            <a class="navbar-brand" aria-label="todolist">
-                <div id="logo" class="animate__slow animate__delay-5s">
-                    <p id="stars-word">stars</p>
-                    <i id="star-icon" class="bi bi-star-fill"></i>
-                    <p id="hub-word">Hub</p>
-                </div>
-            </a>
-        </div>
-    </nav>
-    
-    <!-- Formulario de inicio de sesión -->
-    <div id="loginForm" class="container mt-5">
+    <nav class="navbar navbar-light bg-light">
         
-        <!--<h3 class="text-center">Iniciar sesión</h3>-->
-        <form id="login" aria-labelledby="loginFormHeading">
-            <div id="correo-container">
-                <label for="loginEmail" class="form-label"></label>
-                <input type="email" id="loginEmail" class="form-control" placeholder="Ingresa tu correo" required autocomplete="email">
+            <div class="auth-buttons">
+                <a href="registrarse.html" class="login-btn">Iniciar Sesión</a>
+                <a href="registrarse.html" class="register-btn">Registrarse</a>
             </div>
-            <div class="mb-3">
-                <label for="loginPassword" class="form-label"></label>
-                <input type="password" id="loginPassword" class="form-control" placeholder="Ingresa tu contraseña" required autocomplete="current-password">
-            </div>
-            <div id="btn-ingresar" class="text-center">
-                <button type="submit" class="btn btn-primary">Ingresar</button>
-            </div>
-            <div id="btn-registrarse" class="text-center">
-                <button id="loginGoogleBtn" class="btn btn-danger mt-2" aria-label="Iniciar Sesión con Google">Iniciar sesión con Google</button>
-            </div>
-            <div id="btn-registrarse" class="text-center">
-                <button id="showRegisterForm" type="button" class="btn btn-link mt-3" aria-label="Registrarse"><span id="sin-cuenta-style">¿No tienes cuenta</span> Regístrate aquí</button>
-            </div>
-        </form>
-    </div>
-    
-    <!-- Formulario de registro -->
-    <div id="registerForm" class="container mt-5 d-none">
-        <h3>Registrarse</h3>
-        <form id="register" aria-labelledby="registerFormHeading">
-            <div class="mb-3">
-                <label for="registerEmail" class="form-label">Correo Electrónico</label>
-                <input type="email" id="registerEmail" class="form-control" placeholder="Ingresa tu correo" required autocomplete="email">
-            </div>
-            <div class="mb-3">
-                <label for="registerPassword" class="form-label">Contraseña</label>
-                <input type="password" id="registerPassword" class="form-control" placeholder="Ingresa tu contraseña" required autocomplete="new-password">
-            </div>
-            <button type="submit" class="btn btn-primary">Registrar</button>
-            <button id="backToLogin" type="button" class="btn btn-secondary mt-2" aria-label="Volver al inicio de sesión">Volver</button>
-        </form>
-    </div>
-=======
-    <header>
-        <div id="logo">
-            <p id="stars-word"><a href="index.html">stars</a></p>
-            <i id="star-icon" class="bi bi-star-fill"></i>
-            <p id="hub-word">Hub</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#carousel-description-container">Descripción</a></li>
-                <li><a href="#vision-future-container">Propósito</a></li>
-                <li><a href="#objetivo">Objetivos</a></li>
-                <li><a href="#contacto">Equipo</a></li>
-            </ul>
-        </nav>
-        <div class="auth-buttons">
-            <a href="registro.html" class="login-btn">Iniciar Sesión</a>
-            <a href="registro.html" class="register-btn">Registrarse</a>
-        </div>
-    </header>
->>>>>>> 8fc8b97a9dd5163e360077a87cdf8662bd0c785c
+            <a class="navbar-brand" href="index.html"><div id="logo" class="animate__slow animate__delay-5s d-inline-block align-text-top">
+                <p id="stars-word">stars</p>
+                <i id="star-icon" class="bi bi-star-fill"></i>
+                <div></div>
+                <p id="hub-word">Hub</p>
+            </div></a>
+            
+       
+    </nav>
 
-    <section class="content">
-        <section class="hero">
-            <h1>STARS HUB</h1>
-            <p>¡Tu camino a una educación de calidad comienza aquí! 🚀</p>
+    <main class="content">
+        <section class="hero mt-5">
+            <div id="h1-c" class="mt-5 d-inline-block">
+                <p id="stars-w" class=" highlighted-text-shadow">stars</p>
+                <i id="star-i" class="bi bi-star-fill"></i>
+                    <div></div>
+                    <p id="hub-w" class="">Hub</p> 
+            </div>
+            <p class="mt-5">¡Tu camino a una educación de calidad comienza aquí! 🚀</p>
         </section>
 
         <div class="main-content">
@@ -108,7 +57,7 @@
                                 " alt="Imagen 2">
                             </div>
                             <div class="carousel-slide">
-                                <img src="https://cdn-icons-png.flaticon.com/512/11743/11743524.png
+                                <img src="https://www.utb.edu.co/wp-content/uploads/2023/11/Conociendo-mas-sobre-las-organizaciones.jpg
                                 " alt="Imagen 3">
                             </div>
                             <div class="carousel-slide">
@@ -116,72 +65,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="description">
-                        <p>Nuestra plataforma conecta a estudiantes con oportunidades académicas, recursos de estudio y apoyo entre compañeros. Con STARS HUB, puedes descubrir becas, participar en programas de intercambio de conocimientos, acceder a tutorías personalizadas y mucho más. Nos enfocamos en proporcionar una red inclusiva para todos los estudiantes, especialmente aquellos en contextos desfavorecidos.</p>
-                    </div>
+                    <div class="description pt-4 ps-1">
+                        <p>Nuestra plataforma conecta a estudiantes con oportunidades académicas, recursos de estudio y apoyo entre compañeros.</p>
+                        <p><b>Únete</b> para acceder a programas de intercambio de conocimientos, tutorías personalizadas y una red inclusiva para estudiantes, especialmente en contextos desfavorecidos.</p>
+                        <p>Nos enfocamos en proporcionar una red inclusiva para todos los estudiantes, especialmente aquellos en contextos desfavorecidos.</p>
+                    </div>  
                 </div>
-
-                <div class="vision-future-container" id="vision-future-container">
-                    <div class="vision-text">
-                        <h2>¿Qué nos llevó a crear nuestra app?</h2>
-                        <p>Una visión hacia el futuro: democratizar la educación y hacer accesible el aprendizaje de calidad para todos. Identificamos los siguientes desafíos clave:</p>
-                    </div>
-                    <div class="challenge-boxes">
-                        <div class="challenge-box">
-                            <span class="symbol">📘</span>
-                            <div class="challenge-name">Acceso limitado a recursos educativos actualizados</div>
-                            <p class="challenge-info">Muchos estudiantes no tienen a su disposición materiales de estudio modernos y útiles.</p>
-                        </div>
-                        <div class="challenge-box">
-                            <span class="symbol">🌐</span>
-                            <div class="challenge-name">Falta de conexiones con oportunidades académicas</div>
-                            <p class="challenge-info">A menudo, las oportunidades de becas o tutorías no llegan a estudiantes de áreas remotas.</p>
-                        </div>
-                        <div class="challenge-box">
-                            <span class="symbol">🧑‍🤝‍🧑</span>
-                            <div class="challenge-name">Carencia de una comunidad de aprendizaje colaborativo</div>
-                            <p class="challenge-info">La colaboración y el apoyo entre pares es fundamental para un aprendizaje enriquecedor.</p>
-                        </div>
-                        <div class="challenge-box">
-                            <span class="symbol">🎯</span>
-                            <div class="challenge-name">Desconocimiento de becas y recursos</div>
-                            <p class="challenge-info">
-                                Un gran número de estudiantes no sabe cómo acceder a becas, programas de mentores o recursos complementarios que podrían mejorar su experiencia educativa.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="objetivo" id="objetivo">
-                    <div class="titulo-obj">
-                        <h2>Objetivos</h2>
-                    </div>
-                    <div class="caja-obje">
-                        <div class="caja-objetivo">
-                            <img src="https://www.oportunidadesparatodos.pe/images/shared/girl-boy-talking.svg
-                            " alt="Facilitar el acceso a oportunidades académicas" class="objetivo-img">
-                            <div class="objetivo-content">
-                                <div class="objetivo-name">Facilitar el acceso a oportunidades académicas</div>
-                                <p class="objetivoinfo">Queremos que los estudiantes de secundaria y universitarios encuentren oportunidades de becas y recursos educativos sin importar su ubicación.</p>
-                            </div>
-                        </div>
-                        <div class="caja-objetivo">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQry6Ja_quKOFHMxw44XxmwKaWMklmYn_RBvw&s" alt="Fomentar la inclusión" class="objetivo-img">
-                            <div class="objetivo-content">
-                                <div class="objetivo-name">Fomentar la inclusión</div>
-                                <p class="objetivoinfo">Crear una red inclusiva donde los estudiantes, sin importar su contexto, puedan acceder a recursos y apoyo.</p>
-                            </div>
-                        </div>
-                        <div class="caja-objetivo">
-                            <img src="https://www.escuelainclusiva.cl/wp-content/uploads/2023/02/aprendizajecolaborativo.jpg
-                            " alt="Impulsar el aprendizaje colaborativo" class="objetivo-img">
-                            <div class="objetivo-content">
-                                <div class="objetivo-name">Impulsar el aprendizaje colaborativo</div>
-                                <p class="objetivoinfo">Proporcionar un espacio donde los estudiantes puedan aprender juntos y apoyarse mutuamente.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 
             <div class="right-content">
@@ -208,11 +98,159 @@
                 
             </div>
         </div>
-    </section>
+        <section id="motivo">
+            <div class="vision-future-container " id="vision-future-container">
+                <div class="vision-text text-center">
+                    <h2 >¿Qué nos llevó a crear nuestra app?</h2>
+                    <p><b>Una visión hacia el futuro:</b> democratizar la educación y hacer accesible el aprendizaje de calidad para todos.</p>
+                    <p><b>Identificamos los siguientes desafíos clave:</b></p>
+                </div>
+                <div class="challenge-boxes">
+                    <div class="challenge-box">
+                        <span class="symbol">📘</span>
+                        <div class="challenge-name">Acceso limitado a recursos educativos actualizados</div>
+                        <p class="challenge-info">Muchos estudiantes no tienen a su disposición materiales de estudio modernos y útiles.</p>
+                    </div>
+                    <div class="challenge-box">
+                        <span class="symbol">🌐</span>
+                        <div class="challenge-name">Falta de conexiones con oportunidades académicas</div>
+                        <p class="challenge-info">A menudo, las oportunidades de becas o tutorías no llegan a estudiantes de áreas remotas.</p>
+                    </div>
+                    <div class="challenge-box">
+                        <span class="symbol">🧑‍🤝‍🧑</span>
+                        <div class="challenge-name">Carencia de una comunidad de aprendizaje colaborativo</div>
+                        <p class="challenge-info">La colaboración y el apoyo entre pares es fundamental para un aprendizaje enriquecedor.</p>
+                    </div>
+                    <div class="challenge-box">
+                        <span class="symbol">🎯</span>
+                        <div class="challenge-name">Desconocimiento de becas y recursos</div>
+                        <p class="challenge-info">
+                            Muchos estudiantes desconocen el acceso a becas y mentorías clave para su educación.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="objetivo" id="objetivo">
+            <div class="titulo-nos mb-3">
+                <h2>Objetivos</h2>
+            </div>
+            <div class="text-center row">
+                <div id="row" class="container row mb-2">
+                    <div class="col order-first caja-objetivo mb-2">
+                        <div class="d-inline-block">
+                            <img src="https://www.oportunidadesparatodos.pe/images/shared/girl-boy-talking.svg
+                            " alt="Facilitar el acceso a oportunidades académicas" class="objetivo-img">
+                        </div>
+                        <div class="objetivo-content">
+                            <div class="objetivo-name">Acceder a oportunidades académicas.</div>
+                            <p class="objetivoinfo">Conectar a estudiantes de secundaria y universidad con becas y recursos.</p>
+                        </div>
+                    </div>
+                    <div class="col caja-objetivo mb-2">
+                        <div class="d-inline-block">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQry6Ja_quKOFHMxw44XxmwKaWMklmYn_RBvw&s" alt="Fomentar la inclusión" class="objetivo-img">
+                        </div>
+                        <div class="objetivo-content">
+                            <div class="objetivo-name">Fomentar la inclusión</div>
+                            <p class="objetivoinfo">Crear una red inclusiva, sin importar su contexto, acceder a recursos y apoyo.</p>
+                        </div>
+                    </div>
+                    <div class="col order-last caja-objetivo mb-2">
+                        <div class="d-inline-block">
+                            <img src="https://www.escuelainclusiva.cl/wp-content/uploads/2023/02/aprendizajecolaborativo.jpg
+                    " alt="Impulsar el aprendizaje colaborativo" class="objetivo-img">
+                        </div>
+                        <div class="objetivo-content">
+                            <div class="objetivo-name">Impulsar el aprendizaje colaborativo</div>
+                            <p class="objetivoinfo">Brindamos un espacio para que estudiantes aprendan y se apoyen.</p>
+                        </div>
+                    </div>   
+                </div>  
+            </div>
+        </div>
+
+        <div class="nosotras" id="nosotras">
+            <div class="titulo-nos mb-3">
+                <h2>Nosotras</h2>
+            </div>
+            <div class="text-center row">
+                <div id="row" class="container row mb-2">
+                    <div class="col order-first mb-2">
+                        <div class="col flip-card ">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://i.pinimg.com/736x/46/3c/92/463c92ed96ba42d1a8dcff59c8082753.jpg" alt="Liliana">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="title">Liliana</p>
+                                    <p>JS, CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-2">
+                        <div class="col flip-card ">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://i.pinimg.com/736x/f8/c1/2b/f8c12bf3d0404f9d0e31989f123c7e8f.jpg" alt="Damaris">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="title">Damaris</p>
+                                    <p>JS, CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-2">
+                        <div class="col flip-card ">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://i.pinimg.com/736x/45/da/d2/45dad29e1ed15c0e51179e6cb589fc9a.jpg" alt="Jhadira">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="title">Jhadira</p>
+                                    <p>JS, CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-2">
+                        <div class="col flip-card ">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://i.pinimg.com/736x/17/55/31/175531c1da21fc9287b18a198d5daced.jpg" alt="Leticia">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="title">Leticia</p>
+                                    <p>JS, CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col order-last mb-2">
+                        <div class="col flip-card ">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://i.pinimg.com/736x/6a/4d/6f/6a4d6fa238fd7a7a189e922eea3a4f11.jpg" alt="Violeta">
+                                </div>
+                                <div class="flip-card-back">
+                                    <p class="title">Violeta</p>
+                                    <p>JS, CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>  
+            </div>
+        </div>
+    </main>
     
     <footer>
-        <p>© 2024 STARS HUB. Todos los derechos reservados.</p>
+        <div id="footer">
+            <p>© 2024 STARS HUB. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <script src="assets/JS/inicio.js"></script>
+    <script src="assets/JS/script.js"></script>
 </body>
 </html>
