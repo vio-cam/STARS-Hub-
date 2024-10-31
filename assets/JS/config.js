@@ -36,7 +36,6 @@ export function loginWithGoogle() {
         .then(() => window.location.href = 'redsocial.html')
         .catch((error) => alert("Error al iniciar sesión con Google: " + error.message));
 }
-
 export function createTask(title, description, uid, userName, userAvatar, image) {
     if (image) {
         const storageRef = ref(storage, `images/${image.name}`);
@@ -48,7 +47,7 @@ export function createTask(title, description, uid, userName, userAvatar, image)
     }
 }
 
-function savePost(title, description, uid, userName, userAvatar, imageUrl) {
+function savePost(title, description, uid, userName, userAvatar, imageUrl ) {
     const post = {
         title: title,
         description: description,
@@ -57,11 +56,32 @@ function savePost(title, description, uid, userName, userAvatar, imageUrl) {
         userAvatar: userAvatar,
         imageUrl: imageUrl,
         createdAt: new Date(),
-        // likes: []
+        likes: []
     };
     return addDoc(collection(db, 'tasks'), post);
 }
 
+export function toggleLike(taskId, userId) {
+    const taskRef = doc(db, "tasks", taskId);
+
+    return getDoc(taskRef).then((docSnapshot) => {
+        if (!docSnapshot.exists()) {
+            throw new Error("Tarea no encontrada");
+        }
+
+        const taskData = docSnapshot.data();
+        const likes = taskData.likes || []; // Obtiene el array de likes
+
+        // Alterna el like
+        const newLikes = likes.includes(userId)
+            ? likes.filter((id) => id !== userId) // Quitar el like
+            : [...likes, userId]; // Añadir el like
+
+        return updateDoc(taskRef, {
+            likes: newLikes
+        });
+    });
+}
 
 export function getTasks() {
     return getDocs(collection(db, 'tasks'));
@@ -87,3 +107,9 @@ export function deleteTask(id) {
 
 
 export { auth, db, storage };
+
+
+
+
+
+// likes: []

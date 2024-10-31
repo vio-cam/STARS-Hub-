@@ -28,8 +28,11 @@
             <div class="col-md-4">
                 <div id="saludo" class="mb-0">
                     
+                    
                 </div>
-                <button id="logout" class="btn btn-outline-success" aria-label="Cerrar sesión">Salir</button>
+            <div class="center card"> <button id='logout' class="btn aria-label='Cerrar sesión'">Salir</button>
+                </div>
+                
                 <div class="task-form-container p-4 mt-0">
                       <h1 class="h4 text-center mb-4">Nueva oportunidad</h1>
                     <form id="task-form" aria-labelledby="task-form-heading">
@@ -45,10 +48,11 @@
                         </div>
                         <div class="form-group">
                             <label for="task-file">Archivo</label>
-                            <input type="file" id="task-file" class="form-control-file mb-3" aria-label="Task File">
+                            <i class="bi bi-file-earmark-arrow-up"><input type="file" id="task-file" class="form-control-file mb-3" aria-label="Task File"></i>
+                            
                         </div>
-                        <button type="submit" id="btn-task-save" class="btn btn-primary btn-block">Guardar</button>
-                        <button type="button" id="btn-task-cancel" class="btn btn-secondary btn-block"
+                        <button type="submit" id="btn-task-save" class="btn btn-block">Guardar</button>
+                        <button type="button" id="btn-task-cancel" class="btn btn-block"
                             style="display:none;">Cancelar</button>
                     </form>
                 </div>

@@ -1,5 +1,5 @@
-import { auth, createTask, onGetTasks, deleteTask, getTask, updateTask } from "./config.js";
-import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import { auth, createTask, onGetTasks, deleteTask, getTask, updateTask, toggleLike } from "./config.js";
+import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
 
 const taskForm = document.getElementById('task-form');
 const tasksContainer = document.getElementById('tasks-container');
@@ -33,14 +33,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                             </h4>
                         </div>
                         <div class="text-center">
-                                        <button class="btn" data-id="">
-                                            <i class="">Organizaciones</i>
+                                        <a href= "org.html">Organizaciones</a> 
                                         </button>
                                         <br>
-                                        <button class="btn" data-id="$">
-                                            <i class=""> Perfil</i>
-                                        </button>
-                                      
                                     </div>`;   
             
             onGetTasks((querySnapshot) => {
@@ -49,8 +44,8 @@ window.addEventListener('DOMContentLoaded', async () => {
                     const task = doc.data();
                     const isOwner = task.uid === user.uid;    
                     const createdAt = task.createdAt.toDate().toLocaleString();
-                    tasksContainer.innerHTML += `
-                    <div id="comentario" class="card my-3 shadow-sm" style="width: 700px; margin: 0 auto;">
+                    tasksContainer.innerHTML += 
+                    `<div id="comentario" class="card my-3 shadow-sm" style= "margin: 0 auto;">
                         <div class="card-body">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="${task.userAvatar}" alt="${task.userName}" class="rounded-circle me-3" width="50" height="50">
@@ -58,10 +53,10 @@ window.addEventListener('DOMContentLoaded', async () => {
                                     <h5 class="card-title mb-0 ml-2">${task.userName}</h5>
                                     <small class="text-muted ml-2">${createdAt}</small>
                                 </div>
-                                ${isOwner ? `
-                                    <div class="mt-3 text-left botones">
-                                    <p>     </p>
-                                        <button class="btn  btn-edit" data-id="${doc.id}">
+                                
+                                ${isOwner ? 
+                                    `<div class="mt-3 text-left botones">
+                                        <button class="btn btn-edit" data-id="${doc.id}">
                                             <i class="bi bi-pencil-square"> Editar</i>
                                         </button>
                                         <button class="btn btn-delete" data-id="${doc.id}">
@@ -71,21 +66,49 @@ window.addEventListener('DOMContentLoaded', async () => {
                             </div>
                             <h3 class="h5" id="titulo">${task.title}</h3>
                             <p class="card-text mt-2" id="descripción">${task.description}</p>
-                
-                            ${task.imageUrl ? `
-                                <div class="card mt-3 text-center" style="max-width: 500px; margin: 0 auto;">
+
+                            ${task.imageUrl ? 
+                                `<div class="card mt-3 text-center" style="max-width: 500px; margin: 0 auto;">
                                     <img src="${task.imageUrl}" alt="Imagen de ${task.userName}" class="img-fluid rounded" style="width: 500px; height: 300px; object-fit: cover;">
+                                </div>` : ''}
+                                       <div class="d-flex align-items-center mt-3">
+                                    <button class="btn btn-like" data-id="${doc.id}">
+                                        <i class="bi bi-heart${task.likes && task.likes.includes(user.uid) ? '-fill' : ''}"></i>
+                                    </button>
+                                    <span class="ms-2" id="likes-count-${doc.id}">${task.likes ? task.likes.length : 0}</span>    Likes
                                 </div>
-                            ` : ''}
-                
+                           
                         </div>
                     </div>
-                
-                    
-                </div>`;
+                           
+                        </div>
+                    </div>`;
+
                 
                 });
+                const btnsLike = tasksContainer.querySelectorAll('.btn-like');
+                btnsLike.forEach((btn) => {
+                    btn.addEventListener('click', async (event) => {
+                        
+                            const taskId = event.currentTarget.dataset.id;
+                            const userId = auth.currentUser.uid;
+                
+                            // Llama a la función para alternar el "like"
+                            await toggleLike(taskId, userId);
+                
+                            const likesCountSpan = document.getElementById(`likes-count-${taskId}`);
+                            const taskDoc = await getTask(taskId); // Obtiene la tarea actualizada
+                            const taskData = taskDoc.data();
+                            likesCountSpan.innerText = taskData.likes ? taskData.likes.length : 0; // Actualiza el contador
 
+                
+                            // Alternar el icono de "like"
+                            const likeIcon = event.currentTarget.querySelector('i');
+                            likeIcon.classList.toggle('bi-heart-fill');
+                            likeIcon.classList.toggle('bi-heart');
+                        
+                    });
+                });
                 loadingSpinner.style.display = 'none';
 
                   // Listener para botones de eliminar
@@ -110,8 +133,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   
                           editStatus = true;
                           id = doc.id;
-                          console.log(doc.id);
-                          
                           taskForm['btn-task-save'].innerText = 'Update';
                           btnCancel.style.display = 'inline'; 
                       });
@@ -123,6 +144,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
+
 
 btnLogout.addEventListener('click', async () => {
     try {
@@ -147,7 +169,8 @@ taskForm.addEventListener('submit', async (event) => {
     if (user) {
         const uid = user.uid;
         if (editStatus) {
-            await updateTask(id, { title, description,  });
+            await updateTask(id, { title, description, });
+
             editStatus = false;
             taskForm['btn-task-save'].innerText = 'Save';
             btnCancel.style.display = 'none';
@@ -167,3 +190,4 @@ btnCancel.addEventListener('click', () => {
     taskForm['btn-task-save'].innerText = 'Save';
     btnCancel.style.display = 'none';
 });
+

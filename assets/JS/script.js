@@ -13,4 +13,4 @@ function nextSlide() {
     showSlides();
 }
 
-setInterval(nextSlide, 3000); // Cambia cada 3 segundos
+setInterval(nextSlide, 3000);

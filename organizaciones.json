@@ -1,0 +1,103 @@
+{
+  "organizations": [
+    {
+      "name": "She is the Universe",
+      "description": "Una plataforma global que amplifica las voces de adolescentes de todo el mundo mediante el storytelling y el apoyo comunitario. Ofrece mentorías, retiros de liderazgo y una comunidad virtual llamada Galaxy donde las chicas pueden conectarse y compartir sus sueños.",
+      "founder": "Laura Peña",
+      "programs": ["Galaxy", "World Changers"],
+      "focus": ["Empoderamiento femenino", "Liderazgo juvenil", "Mentoría"],
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStagoYZhImDaxrPhP3w_aK7KZN9j0V9YcpjA&s",
+      "countries_involved": ["EE.UU.", "República Dominicana", "Perú", "Brasil", "España", "China", "Kenia"],
+      "website": "https://www.sheistheuniverse.org"
+    },
+    {
+      "name": "Enseña Perú",
+      "description": "Organización educativa que busca transformar el sistema educativo peruano, especialmente en zonas vulnerables, capacitando a líderes comprometidos con la educación.",
+      "model": "Teach for All",
+      "focus": ["Educación", "Liderazgo en zonas vulnerables"],
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW6MZU996GKPNOfI_mlptI_GOtqCdwkeLDhUaQmDlqurKFtLjpCXZKJvXGrAdSfxwfyRo&usqp=CAU",
+      "country": "Perú",
+      "website": "https://www.ensenaperu.org"
+    },
+    {
+      "name": "Lala (Latin American Leadership Academy)",
+      "description": "Academia de liderazgo que capacita y conecta a jóvenes de América Latina para que se conviertan en líderes de cambio positivo, abordando temas de justicia social, sostenibilidad y desarrollo.",
+      "focus": ["Liderazgo juvenil", "Justicia social", "Sostenibilidad"],
+      "img":"https://yt3.googleusercontent.com/5V_gDxux9M3E5bwklNFkQWTUM-5s-vUmf-P8dBaB3l5wbSdVQOq87lrm7SepmgNZECcKkKgMJQ=s900-c-k-c0x00ffffff-no-rj",
+      "region": "América Latina",
+      "website": "https://www.latinamericanleadershipacademy.org"
+    },
+    {
+      "name": "Chicas en Tecnología",
+      "description": "Organización argentina que impulsa la participación de chicas en el sector tecnológico mediante programas de programación, mentoría y emprendimientos tecnológicos.",
+      "focus": ["Tecnología", "Equidad de género", "STEM"],
+      "img":"https://yt3.googleusercontent.com/WA_vu-V-O6GKtUfoWB1TfTYygoCRbYJM_wwxu3mPdy_erMZZreSbl8LwUFD6n1ikyxX0hnaUHw=s900-c-k-c0x00ffffff-no-rj",
+      "country": "Argentina",
+      "website": "https://www.chicasentecnologia.org"
+    },
+    {
+      "name": "Kusisqa",
+      "description": "Programa que empodera a jóvenes en la región andina en habilidades de liderazgo y desarrollo social.",
+      "focus": ["Liderazgo juvenil", "Desarrollo social"],
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCFxIv7OcJgDYZIH2S3Bok9bk5exzJiJilKA&s",
+      "region": "Región andina",
+      "website": "https://www.instagram.com/kusisqaperu/"
+    },
+    {
+      "name": "Make The Difference",
+      "description": "Iniciativa que apoya proyectos de emprendimiento y cambio social en Latinoamérica, enfocada en el desarrollo de habilidades para el cambio social.",
+      "focus": ["Emprendimiento social", "Cambio social"],
+      "img":"https://media.licdn.com/dms/image/v2/D4E0BAQHa4-UTvVWgkg/company-logo_200_200/company-logo_200_200/0/1711594900385/make_the_difference_1_logo?e=1738195200&v=beta&t=hRp5cpwx6M8STYZn3nXkR9BQXc6iyR2sCrkkc4BoXPg",
+      "region": "Latinoamérica",
+      "website": "https://www.instagram.com/make.thedifference1/"
+    },
+    {
+      "name": "JaAmerica Perú",
+      "description": "Programa de Junior Achievement que fomenta el espíritu emprendedor en jóvenes peruanos, enseñándoles sobre negocios y habilidades emprendedoras.",
+      "focus": ["Emprendimiento", "Educación en negocios"],
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUMelkc1ao9DmmvHSAvTnY3yTvrk7re1Fi3A&s",
+      "country": "Perú",
+      "website": "https://www.japeru.org"
+    },
+    {
+      "name": "America Solidaria",
+      "description": "Organización que apoya proyectos de desarrollo y lucha contra la pobreza en América Latina.",
+      "focus": ["Desarrollo social", "Lucha contra la pobreza"],
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZMO-oUOXl9QZ77EP5EVlXMEWmdOpDiIpwDw&s",
+      "region": "América Latina",
+      "website": "https://www.americasolidaria.org"
+    },
+    {
+      "name": "Pronabec",
+      "description": "Institución peruana que otorga becas educativas a estudiantes talentosos de bajos recursos para acceder a educación superior.",
+      "focus": ["Becas educativas", "Acceso a educación superior"],
+      "img":"https://pbs.twimg.com/profile_images/1821557479123144704/FCfuUIq7_400x400.jpg",
+      "country": "Perú",
+      "website": "https://www.pronabec.gob.pe"
+    },
+    {
+      "name": "Senaju",
+      "description": "Secretaría Nacional de la Juventud en Perú, encargada de desarrollar políticas públicas que apoyen el desarrollo de la juventud.",
+      "focus": ["Desarrollo juvenil", "Políticas públicas"],
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7OmppBR1-0hlURJDQ_Jk7x3ZYv4Smk7-7pg&s",
+      "country": "Perú",
+      "website": "https://www.senaju.gob.pe"
+    },
+    {
+      "name": "Peru Champs",
+      "description": "Organización que apoya a estudiantes peruanos talentosos con recursos limitados a través de programas educativos y mentorías.",
+      "focus": ["Educación", "Mentoría", "Desarrollo juvenil"],
+      "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk5qrJgfUbBKgozzqW79yWBlJMsLn2LEScqw&s",
+      "country": "Perú",
+      "website": "https://www.peruchamps.org"
+    },
+    {
+      "name": "Concurso Los Creadores",
+      "description": "Competencia para jóvenes innovadores en Perú que promueve y premia ideas creativas y proyectos tecnológicos.",
+      "focus": ["Innovación juvenil", "Tecnología"],
+      "img":"https://yt3.googleusercontent.com/P6RVPSJmMsecLx4ELe_BrRYIreEjs1lRrWrg7Da7lPLsEMESzCBDGUtx0T1Evd4eKE2vOwBTNQ=s900-c-k-c0x00ffffff-no-rj",
+      "country": "Perú",
+      "website": "https://www.loscreadores.pe"
+    }
+  ]
+}
